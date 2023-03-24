@@ -1,0 +1,12 @@
+{
+  "name": "bean331",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eren Lewis",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1"
+  }
+}
