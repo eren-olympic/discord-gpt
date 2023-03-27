@@ -4,9 +4,15 @@
   "main": "index.js",
   "author": "Eren Lewis",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "discord.js": "^14.8.0",
     "dotenv": "^16.0.3",
     "openai": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=16.6.0"
   }
 }
