@@ -19,10 +19,12 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-client.on("messageCreate", async (message) => {
+const channelIDs = process.env.CHANNEL_ID.split(',').map(id => id.trim());
+
+client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
-  if (message.channel.id !== process.env.CHANNEL_ID) return;
-  if (message.content.startsWith("!")) return;
+  if (!channelIDs.includes(message.channel.id.toString())) return; // convert the channel id to string before comparing
+  if (message.content.startsWith('!')) return;
 
   let conversationLog = [{ role: "system", content: "You ara friendly bot." }];
 
